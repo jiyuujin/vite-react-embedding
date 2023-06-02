@@ -40,6 +40,7 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <div id="flutter_target"></div>
   <script>
     // Listen until Flutter tells us it's ready to rumble
     window.addEventListener('flutter-initialized', function (event) {
@@ -57,9 +58,15 @@
         },
         onEntrypointLoaded: async function(engineInitializer) {
           await engineInitializer.autoStart();
+          let appRunner = await engineInitializer.initializeEngine({
+            hostElement: target,
+          });
+          await appRunner.runApp();
         }
       });
     });
   </script>
+  <script src="js/demo-js-interop.js" defer></script>
+  <script src="js/demo-css-fx.js" defer></script>
 </body>
 </html>

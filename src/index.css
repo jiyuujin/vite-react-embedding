@@ -6,3 +6,15 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#flutter_target {
+  position: absolute;
+  right: 0px;
+  transform-origin: 0px 0px 0px;
+  transform: rotate(-14.1deg) scale(0.80) translate(-539px, -45px);
+  width: 316px;
+  height: 678px;
+  border-radius: 34px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
